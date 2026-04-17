@@ -1,0 +1,8 @@
+{
+  "name": "games-online",
+  "scripts": {
+    "backend": "cd backend && node src/index.js",
+    "frontend": "cd frontend && npx ng serve --port 4200",
+    "dev": "npm run backend & npm run frontend"
+  }
+}

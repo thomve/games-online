@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx @angular/cli version)",
+      "Bash(npx @angular/cli new frontend --routing=true --style=scss --skip-git=true --skip-install=false --standalone=true)",
+      "Bash(npx ng *)",
+      "Bash(node src/index.js)",
+      "Bash(echo \"Backend PID: $!\")",
+      "Bash(curl -s http://localhost:3000/api/health)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4200)",
+      "Bash(curl -s -X POST http://localhost:3000/api/character/create -H \"Content-Type: application/json\" -d '{\"name\":\"TestHero\"}')",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Created: {d[\\\\\"name\\\\\"]} Lv.{d[\\\\\"level\\\\\"]}, HP:{d[\\\\\"stats\\\\\"][\\\\\"health\\\\\"]}/{d[\\\\\"stats\\\\\"][\\\\\"maxHealth\\\\\"]}, Gold:{d[\\\\\"gold\\\\\"]}'\\)\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/character/create -H \"Content-Type: application/json\" -d \"{\\\\\"name\\\\\":\\\\\"TestHero\\\\\"}\")",
+      "Bash(curl -s http://localhost:3000/api/world/zones)",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const z=JSON.parse\\(d\\); z.forEach\\(z=>console.log\\(z.icon,z.name,z.recommendedLevel\\)\\)\")",
+      "Bash(curl -s \"http://localhost:3000/api/world/explore/forest\" -X POST -H \"Content-Type: application/json\")",
+      "Bash(chmod +x /c/Users/thoma/Documents/Projects/games-online/start.sh)"
+    ]
+  }
+}
