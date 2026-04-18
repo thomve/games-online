@@ -62,4 +62,13 @@ export class ApiService {
   fleeCombat(combatId: string): Observable<{ combat: Combat; character: Character }> {
     return this.http.post<{ combat: Combat; character: Character }>(`${this.base}/world/combat/${combatId}/flee`, {});
   }
+
+  // Shop
+  getShopItems(): Observable<Item[]> {
+    return this.http.get<Item[]>(`${this.base}/character/shop`);
+  }
+
+  buyItem(templateId: string): Observable<{ character: Character; item: Item }> {
+    return this.http.post<{ character: Character; item: Item }>(`${this.base}/character/shop/buy`, { templateId });
+  }
 }

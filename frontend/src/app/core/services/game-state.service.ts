@@ -3,7 +3,7 @@ import { Character, Combat, Zone, Dungeon } from '../models/game.models';
 import { ApiService } from './api.service';
 import { tap } from 'rxjs/operators';
 
-export type GameView = 'create' | 'world' | 'combat' | 'character' | 'inventory' | 'dungeon';
+export type GameView = 'create' | 'world' | 'combat' | 'character' | 'inventory' | 'dungeon' | 'shop';
 
 @Injectable({ providedIn: 'root' })
 export class GameStateService {

@@ -6,6 +6,7 @@ import { CharacterPanelComponent } from './features/character/character-panel/ch
 import { WorldComponent } from './features/world/world.component';
 import { CombatComponent } from './features/combat/combat.component';
 import { InventoryComponent } from './features/inventory/inventory.component';
+import { ShopComponent } from './features/shop/shop.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { InventoryComponent } from './features/inventory/inventory.component';
     WorldComponent,
     CombatComponent,
     InventoryComponent,
+    ShopComponent,
   ],
   template: `
     <!-- Notifications -->
@@ -37,6 +39,7 @@ import { InventoryComponent } from './features/inventory/inventory.component';
             <button [class.active]="state.currentView() === 'world'" (click)="state.navigateTo('world')" [disabled]="isInCombat()">🗺️ World</button>
             <button [class.active]="state.currentView() === 'inventory'" (click)="state.navigateTo('inventory')" [disabled]="isInCombat()">🎒 Inventory <span class="inv-badge">{{ invCount() }}</span></button>
             <button [class.active]="state.currentView() === 'character'" (click)="state.navigateTo('character')" [disabled]="isInCombat()">👤 Character</button>
+            <button [class.active]="state.currentView() === 'shop'" (click)="state.navigateTo('shop')" [disabled]="isInCombat()">🏪 Shop</button>
           </nav>
 
           <!-- Mini char info always visible -->
@@ -68,6 +71,8 @@ import { InventoryComponent } from './features/inventory/inventory.component';
             <app-inventory />
           } @else if (state.currentView() === 'character') {
             <app-character-panel />
+          } @else if (state.currentView() === 'shop') {
+            <app-shop />
           }
         </main>
       </div>
